@@ -1,0 +1,100 @@
+body, html{
+  background: #fff;
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  font-size: 12pt;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+main{
+  padding-top: 300px;
+}
+.active{
+  background-color: rgba(42,155,42,.65);
+}
+
+h1, h2, h3, h4, h5, h6{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+h2{
+  font-size: 48px;
+}
+nav{
+  z-index: 99;
+  background-color: rgba(255,255,255,0);
+  box-shadow: 0px 0px 0px !important;
+  border: 0px !important;
+}
+.parallax-container{
+  height:;
+  z-index: 99;
+}
+.button-collapse{
+  cursor: pointer;
+}
+
+#sidenav-overlay{
+  z-index: 2 !important;
+}
+#sideAnchor{
+  padding: 0px;
+}
+#sideAnchor a:hover{
+  background-color: #66bb6a;
+}
+
+.logo{
+  max-height: 48px;
+  margin: 8px;
+}
+.menu-icon{
+  font-size: 32px;
+  position: absolute;
+  top: -8px;
+  left: 2px;
+}
+
+.postText{
+  font-family: Calibri;
+  font-size: 1.3rem;
+  font-weight: 200;
+  color: rgb828282);
+  text-shadow: .1em .1em .1em white;
+}
+
+
+@media(max-width: 800px){
+  h1{
+    font-size: 48px;
+  }
+  h2{
+    font-size: 32px;
+  }
+}
+
+@media(max-width: 480px){
+  h1{
+    font-size: 32px;
+  }
+  h2{
+    font-size: 26px;
+  }
+}
+@media(max-width: ){
+  h1{
+
+  }
+}
