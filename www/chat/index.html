@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="lib/css/materialize.css">
+    <link rel="stylesheet" href="lib/css/index.css">
+    <title> OC Radio | Player </title>
+  </head>
+  <body>
+
+    <!-- NAVBAR FOR SMALL/MOBILE DEVICES WILL ALSO BE TOGGABLE -->
+    <div class="navbar-fixed hide-on-med-and-up" id="navbar">
+      <nav class="green lighten-1">
+        <div class="nav-wrapper">
+          <ul class="row">
+            <li class="col s8 left">
+              <a href='#' class="white-text waves-effect waves-light left"><i class="material-icons">pause</i></a>
+              <div class="ticker">
+                <ul>
+
+                  <li><em>Can't Feel My Face</em></li>
+                  <li><b>The Weekend</b></li>
+                  <li>(feat) NoOne</li>
+                  ...
+                </ul>
+              </div>
+            </li>
+
+            <li class="col s4 right">
+              <a href='#' class="white-text waves-effect waves-light right" onclick='logout();' id="logoutBTN">&nbsp; logout &nbsp;</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- END OF DYNAMIC NAV -->
+
+    <!-- HEADER -->
+    <header class="row hide-on-small-only">
+      <h1 class="center-align grey-text text-darken-2" id="login-message"> OC Radio | Player </h1>
+
+
+
+      <!-- LOGOUT BUTTON -->
+      <div class="row">
+        <a href='#' class="btn-flat white-text waves-effect waves-light" onclick='logout();' id="logoutBTN">logout</a>
+      </div>
+
+      <!-- PLAYER WILL GO HERE -->
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <p> PLAYER GOES HERE </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- PLAYER WILL END HERE -->
+
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- LOGIN FORM -->
+    <div class="row container" id="login-wrapper">
+      <div class="col s12 m8 l6 push-m2 push-l3 left-align">
+        <form id="auth-form">
+            <label for="email" data-error="somethings missing..." data-success="looks great!">Email</label>
+            <input type="email" id="email" class="input-field" placeholder="someone@example.com" autocomplete="on" required/>
+          <br/>
+          <label for="password">
+            Password
+            <input type="password" id="password" placeholder="" class="input-field" required/>
+          </label>
+          <a href='#' class="btn-flat blue-text center-align waves-effect waves-light col s6" onclick='register();'>Register</a>
+          <a href='#' class="btn-flat blue-text center-align waves-effect waves-light col s6" onclick='login();'>Login</a>
+          <a href='#' class="btn-flat grey-text center-align waves-effect waves-light col s12" onclick='resetPass();'>Reset Password</a>
+        </form>
+      </div>
+    </div>
+    <!-- END OF LOGIN FORM -->
+
+    <!-- CHAT CONTAINER -->
+    <main class="row">
+      <div class="chat-container col s12">
+        <!-- MESSAGES CONTAINER -->
+        <div class="messages-container">
+          <div class="row">
+            <ul id='messages'></ul>
+          </div>
+
+        </div>
+        <!-- END OF MESSAGES CONTAINER -->
+      </div>
+
+      <!-- CHAT INPUT CONTAINER -->
+      <div class='input-container row'>
+        <div class="col s12">
+          <label for="messageInput">
+            <textarea id="messageInput" class="materialize-textarea" maxlength="300" placeholder="press enter to send"></textarea>
+          </label>
+        </div>
+      </div>
+      <!-- END OF CHAT INPUT CONTAINER -->
+    </main>
+    <!-- END OF CHAT CONTAINER -->
+
+    <script src='lib/js/jquery.js'></script>
+    <script src='lib/js/firebase.js'></script>
+    <script src="lib/js/materialize.js"></script>
+    <script src="lib/js/ticker/jquery.ticker.min.js"></script>
+    <script src="lib/js/index.js"></script>
+  </body>
+</html>

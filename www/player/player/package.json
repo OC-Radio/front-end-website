@@ -1,0 +1,18 @@
+{
+  "name": "angular_test",
+  "version": "1.0.0",
+  "description": "Angular Hello World test app",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "paper-audio-player": "0.0.2",
+    "web-audio-player": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zachary Foutz",
+  "license": "ISC"
+}

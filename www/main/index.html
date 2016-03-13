@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+        Website design by www.zacharyfoutz.comp
+
+        Title: OC Radio
+        Author: Zachary Foutz
+        Date: 3-9-16
+        Purpose:
+                This site is design to be used by Olympic College as a functional and
+                appealing page for their internet radio station.
+
+        NOTES:
+            >   This page uses HandlebarsJS for templating and Materialize CSS for UI Design.
+
+            >   You can find important templates for each section of the site at the bottom
+                of the page near the closing body tag.
+
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OC Radio</title>
+    <link rel="stylesheet" href="lib/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="lib/css/icons.css">
+    <link rel="stylesheet" href="lib/css/styles.css">
+  </head>
+  <body class="content-wrapper flow-text">
+      <!-- Navigation Bar -->
+      <header>
+        <div class="banner-wrapper row grey darken-4 white-text">
+          <div class="container center">
+            <h1> Olympic College </h1>
+            <p class="grey-text text-lighten-2">STUDENT RADIO</p>
+            <button href="player/public" class="btn red white-text waves-effect waves-light row" id="newBTN">Listen Now</button>
+          </div>
+          <nav class="green lighten-1 white-text text-darken-4">
+            <div class="nav-wrapper">
+              <a href="javascript:setTemplate('home')" class="brand-logo ">&nbsp;OCR</a>
+              <a hef="#" data-activates="mobile-nav" class="button-collapse white-text text-darken-4"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="javascript:setTemplate('home')" class="home">Home</a></li>
+                <li><a href="player/public" class="player">Listen</a></li>
+                <li><a href="javascript:setTemplate('news')" class="news">News</a></li>
+                <li><a href="#"  class="events">Events</a></li>
+                <li><a href="#" class="">Contact Us</a></li>
+              </ul>
+              <ul class="side-nav grey darken-4" id="mobile-nav">
+                <li class="grey darken-4" id="sideAnchor">
+                  <a href="#" class="white-text col s12 waves-effect waves-light">
+                    <i class="material-icons left">home</i> Home
+                  </a>
+                </li>
+                <li class="grey darken-4" id="sideAnchor">
+                  <a href="#" class="white-text waves-effect waves-light">
+                    <i class="material-icons left">chrome_reader_mode</i> News
+                  </a>
+                </li>
+                <li class="grey darken-4" id="sideAnchor">
+                  <a href="#" class="white-text waves-effect waves-light">
+                    <i class="material-icons left">event</i> Events
+                  </a>
+                </li>
+                <li class="grey darken-4" id="sideAnchor">
+                  <a href="#" class="white-text waves-effect waves-light">
+                    <i class="material-icons left">mail</i> Contact Us
+                  </a>
+                </li>
+                <li class="grey darken-4" id="sideAnchor">
+                  <a href="#" class="white-text waves-effect waves-light">
+                    <i class="material-icons left">favorite</i> Volunteer
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <section class="postHolder"></section>
+      </main>
+
+    <footer class="page-footer green lighten-3">
+      <div class="row">
+        <div class="left-align col s12 white-text">
+          <ul class="left-align">
+            <li class="row"><a class="white-text btn grey darken-4 waves-effect waves-light" href="#!">News</a></li>
+            <li class="row"><a class="white-text btn grey darken-4 waves-effect waves-light" href="#!">Events</a></li>
+            <li class="row"><a class="white-text btn grey darken-4 waves-effect waves-light" href="#!">Contact Us</a></li>
+            <li class="row"><a class="white-text btn grey darken-4 waves-effect waves-light" href="#!">Volunteer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copyright grey darken-4 center">
+        Olympic College Radio <i class="material-icons">copyright</i> 2016
+      </div>
+    </footer>
+
+    <!-- Landing Page Template -->
+    <script id="home-template" type="text/x-handlebars-template">
+      <div class="row center container">
+        <div class="col s12 m8 push-m2 ">
+          <div class="card grey-text text-darken-4 white">
+            <div class="card-image">
+              <img src="lib/images/rockamp.jpg"/>
+            </div>
+            <div class="card-content">
+              <div class="">
+                OC Radio currently being developed from the ground up by students at OC. In the meantime, feel free to follow the link below to get a taste of what's to come.
+              </div>
+            </div>
+            <div class="card-action">
+              <div class="">
+                <a href="player/public" class="player btn red waves-effect waves-light">listen</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </script>
+
+    <!-- News Section Template -->
+    <script id="post-template" type="text/x-handlebars-template">
+      <article class="row center">
+        <div class="row">
+          <div class="col s12 m8 l6 push-m2 push-l3 left-align">
+            <div class=" left-align">
+              <span class="left-align row">
+                <h4>{{title}}</h4>
+                <h5 class="grey-text"> | {{author}} {{date}}</h5>
+                <a href="javascript:listenTo({{listenTag}})" class="btn-flat waves-effect right listenBTN">
+                  <i class="material-icons">share</i>
+              </a>
+              <br/>
+            </span>
+          </div>
+            <div class="row container">
+            <br/>
+              <img class="responsive-img" src="{{image}}">
+            </div>
+            <div class="col s12 postText">
+              <p class="">
+                {{body}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </script>
+
+    <!-- Pagination For News Articles -->
+    <script id="pagination-template" type="text/x-handlebars-template">
+      <div class="row center">
+        PAGINATION GOES HERE
+      </div>
+    </script>
+
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/materialize.min.js"></script>
+    <script src="lib/js/handlebars.js"></script>
+    <script src="lib/js/main.js"></script>
+  </body>
+</html>
