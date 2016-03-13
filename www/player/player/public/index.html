@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+        Website design by www.zacharyfoutz.comp
+
+        Title: OC Radio
+        Author: Zachary Foutz
+        Date: 3-9-16
+        Purpose:
+                This site is design to be used by Olympic College as a functional and
+                appealing page for their internet radio station.
+
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OC Radio | Player</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css" media="screen,projection"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+  </head>
+  <body>
+
+    <main class="fullPagePlayer">
+      <div class="row" >
+        <!-- Player -->
+        <div class="col s12 m6 l4"  id="playerHolder">
+          <div class="card large grey darken-4 white-text text-darken-4 left-align">
+            <div class="card-image">
+              <img class="responsive-img" src="images/radio.jpg">
+              <span class="card-title">OC Radio </span>
+            </div>
+            <div class="card-content">
+                <h5 id="server-title">TITLE</h5>
+                <p id="description">DESCRIPTION</p>
+            </div>
+            <div class="card-action">
+              <div class="grey darken-4 playerControls">
+                <!-- PLAYER -->
+                <div id="player" class="jp-jplayer"></div>
+                <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+                    <div class="jp-interface center white-text">
+                      <div class="row">
+                        <div class="col s3">
+                          <a class="jp-play btn-flat white-text left" id="player-play" role="button" tabindex="0">
+                            <i class="material-icons large">play_arrow</i>
+                          </a>
+                          <a class="jp-pause btn-flat white-text left" id="player-pause" role="button" tabindex="0">
+                            <i class="material-icons large">pause</i>
+                          </a>
+                        </div>
+                        <div class="col s6">
+                          <div class="row truncate">
+                            <span id="track-title">N/A</span>
+                          </div>
+                        </div>
+                        <div class="col s3">
+                          <a class="jp-mute btn-flat white-text right" id="player-mute" role="button" tabindex="0">
+                            <i class="material-icons large">volume_up</i>
+                          </a>
+                          <a class="jp-unmute btn-flat white-text right" id="player-unmute" role="button" tabindex="0">
+                            <i class="material-icons large">volume_off</i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="jp-no-solution">
+                      <span>Update Required</span>
+                      To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                    </div>
+                  </div><!-- .jp-audio -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End of Player -->
+
+        <!-- Comments Card -->
+        <div class="col s12 m6 l8">
+          <div class="row grey-text text-darken-4 left-align">
+            <div class="card">
+              <div class="card-content">
+                <div class="center">
+                  <h4 class="row card-title"> OCR Live</h4>
+                  <a class="btn blue waves-effect waves-light">LOGIN</a>
+                </div>
+
+                <!--
+                  ONLY SHOWN WHEN LOGGED IN
+                  <div class="row">
+                    <div class="chatTop white grey-text text-darken-4">
+                      <div class="col s12 flow-text">
+                        <br/>
+                      </div>
+                      <div class="row">
+                        <label for="new-chat">
+                          <input type="text" id="new-chat" placeholder="say something..." class="col s11"/>
+                          <a class="btn-flat col s1 right ">
+                            <i class="material-icons right">send</i>
+                          </a>
+                        </label>
+                      </div>
+                    </div> -->
+
+
+                  <div class="row container grey-text text-darken-4 left-align">
+                    <div class="col s12">
+                      <h4 class="row card-title center"> Commments & Stuff</h4>
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+
+                      <div class="col s12 left-align">
+                        <p clas="flow-text">
+                          <b> Sally Sue </b> |
+                          Just some random texts and comments would go here. Just some random texts and comments would go here. Just some random texts.
+                        </p>
+                        <br/>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of comments -->
+
+
+
+      </div>
+    </main>
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/jplayer/dist/jplayer/jquery.jplayer.min.js"></script>
+    <script src="../../lib/js/materialize.min.js"></script>
+    <script>
+      $(function(){
+        //$('#playerHolder').pushpin({ top: $('#playerHolder').offset().top  });
+      });
+    </script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>
