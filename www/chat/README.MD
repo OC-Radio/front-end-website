@@ -4,7 +4,7 @@ This repository is to hold the chat application for OC Radio.
 
 The eventual plan is to use NodeJS and AngularJS to streamline the whole application and make it available for iOS, Android, and perhaps other platforms.
 
-In the meantime, see the [live demo](https://www.zacharyfoutz.com/chat "zChat").
+In the meantime, see the [live demo](http://www.zacharyfoutz.com/chat "zChat").
 
 
 ## TODO
