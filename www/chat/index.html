@@ -19,7 +19,6 @@
               <a href='#' class="white-text waves-effect waves-light left"><i class="material-icons">pause</i></a>
               <div class="ticker">
                 <ul>
-
                   <li><em>Can't Feel My Face</em></li>
                   <li><b>The Weekend</b></li>
                   <li>(feat) NoOne</li>
@@ -27,8 +26,8 @@
                 </ul>
               </div>
             </li>
-
             <li class="col s4 right">
+              <small class="center-align grey-text text-darken-2" id="profile"> OC Radio | Player </small>
               <a href='#' class="white-text waves-effect waves-light right" onclick='logout();' id="logoutBTN">&nbsp; logout &nbsp;</a>
             </li>
           </ul>
@@ -39,22 +38,54 @@
 
     <!-- HEADER -->
     <header class="row hide-on-small-only">
-      <h1 class="center-align grey-text text-darken-2" id="login-message"> OC Radio | Player </h1>
-
-
 
       <!-- LOGOUT BUTTON -->
       <div class="row">
-        <a href='#' class="btn-flat white-text waves-effect waves-light" onclick='logout();' id="logoutBTN">logout</a>
+        <small class="center-align white-text text-darken-2" id="profile2"></small>
+        <a href='#' class="btn-floating btn-flat tooltipped white  waves-effect waves-light right" onclick='logout();' id="logoutBTN" data-position="bottom" data-delay="50" data-tooltip="logout">
+          <i class="material-icons red-text">settings_power</i>
+        </a>
       </div>
+      <!-- END OF LOGOUT BUTTON -->
 
       <!-- PLAYER WILL GO HERE -->
       <div class="row">
         <div class="col s12">
-          <div class="card">
-            <div class="card-content">
-              <p> PLAYER GOES HERE </p>
+          <div class="white-text">
+            <div class="divider"></div>
+            <div class="ticker row">
+              <ul>
+                <li>Now playing <em>Can't Feel My Face</em></li>
+                <li>Performed by <b>The Weekend</b></li>
+              </ul>
             </div>
+            <div class="col s12">
+              <a href='#' class="white-text waves-effect waves-light "><i class="material-icons">play_arrow</i></a>
+              <a href='#' class="white-text waves-effect waves-light "><i class="material-icons">volume_mute</i></a>
+            </div>
+
+            <div class="divider"></div>
+            <!-- OPTIONS MENU -->
+            <div class="row contianer">
+              <ul class="flow-text left-align">
+                <li>Options</li>
+                <li class="center">
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="filled-in red-text" id="enterSender" />
+                    <label for="enterSender">enter to send</label>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="filled-in red-text" id="tickerStopper" />
+                    <label for="tickerStopper">stop ticker animation</label>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <!-- END OF OPTIONS MENU -->
           </div>
         </div>
       </div>
@@ -66,6 +97,7 @@
     <!-- LOGIN FORM -->
     <div class="row container" id="login-wrapper">
       <div class="col s12 m8 l6 push-m2 push-l3 left-align">
+        <h1 class="center-align grey-text text-darken-2" id="login-message"> OC Radio | Player </h1>
         <form id="auth-form">
             <label for="email" data-error="somethings missing..." data-success="looks great!">Email</label>
             <input type="email" id="email" class="input-field" placeholder="someone@example.com" autocomplete="on" required/>
@@ -96,11 +128,14 @@
       </div>
 
       <!-- CHAT INPUT CONTAINER -->
-      <div class='input-container row'>
-        <div class="col s12">
-          <label for="messageInput">
-            <textarea id="messageInput" class="materialize-textarea" maxlength="300" placeholder="press enter to send"></textarea>
-          </label>
+      <div class='input-container'>
+          <textarea id="messageInput" tabindex="1" class="col s12" placeholder="write a message..." ></textarea>
+        <div class="valign-wrapper" id="messageInput-overlay">
+
+          <a class="btn-flat grey-text waves-effect waves-dark" onclick="postNewMessage();">
+            send
+            <i class="material-icons">send</i>
+          </a>
         </div>
       </div>
       <!-- END OF CHAT INPUT CONTAINER -->
