@@ -1,10 +1,9 @@
 body, html{
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: rgb(240,240,240);
-  overflow: hidden;
   font-family: 'Helvetica Neue', Verdana, Garamond, Georgia, sans-serif;
   font-size: 1rem;
   box-sizing: border-box;
@@ -27,21 +26,22 @@ header{
 }
 
 main{
+<<<<<<< HEAD
+  margin: 0;
+  padding: 0;
+  word-break: break-word;
+  overflow: hidden;
+=======
   max-height: 1080px;
   width: auto;
   margin: 0;
   padding: 0;
   word-break: break-word;
+>>>>>>> OC-Radio/master
 }
 .chat-container{
-  height: 100%;
-  position: absolute;
   margin: 0 !important;
   padding: 0 !important;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 0;
 }
 .input-container{
   position: absolute;
@@ -51,21 +51,34 @@ main{
   margin: 0 !important;
   padding: 0 !important;
   bottom: 0 !important;
+<<<<<<< HEAD
+  width: 75%;
+=======
   width: 60%;
   min-height: 100px;
+>>>>>>> OC-Radio/master
   z-index: 99;
   border-top: 1px solid rgb(240, 240, 240);;
   background: rgb(255, 255, 255);
   display: block;
+<<<<<<< HEAD
+=======
 
+>>>>>>> OC-Radio/master
 }
 .input-container textarea{
   width: 100% !important;
   height: 100% !important;
+<<<<<<< HEAD
+  color: #000;
+  resize: false !important;
+  background: rgb(240, 240, 240);
+=======
   color: #1e1e1e;
   resize: false;
   background: rgb(255, 255, 255);
   float: none !important;
+>>>>>>> OC-Radio/master
 
   border: none;
   overflow: auto;
@@ -79,6 +92,10 @@ main{
   border-bottom: 0px solid rgba(0,0,0,0) !important;
   box-shadow: 0 0 0 0 rgba(0,0,0,0) !important;
   border: 0px solid white;
+<<<<<<< HEAD
+  background-color: #fff;
+=======
+>>>>>>> OC-Radio/master
 }
 #messageInput-overlay{
   position: absolute;
@@ -86,18 +103,23 @@ main{
   right: 0;
 }
 .messages-container{
+<<<<<<< HEAD
+  height: 85vh;
+  width: 75%;
+=======
   height: 85%;
   width: 60%;
+>>>>>>> OC-Radio/master
   overflow: hidden;
   background: rgb(240,240,240);
   margin: 0;
   border-bottom: 1px solid rgb(230,230,230);
 }
 #messages{
-  max-height: 85vh;
   overflow-y: scroll;
   margin: 0;
   width: 100%;
+  height: 85vh;
   padding: 10px;
 }
 #messages li{
@@ -128,10 +150,54 @@ main{
   background-color: rgba(0,0,0,0);
 }
 
-#navbar{
-  z-index: 99;
+#smallPlayer{
+  width: 100%;
+  height: 100% !important;
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
 }
+<<<<<<< HEAD
+#smallPlayer ul{
+  height: inherit;
+  width: inherit;
+}
+#smallPlayer ul li{
+  margin-top: 25px;
+  padding: 10px;
+  width: 100%;
+  display: block;
+}
+#smallControls{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0;
+  max-height: 48px;
+}
+.myWrapper{
+  padding: 10px;
+}
+.myWrapperSmall{
+  text-align: center;
+  width: 95%;
+  margin: auto;
+}
+.album_art{
+  width: auto;
+  display: block;
+  height: 50vh !important;
+  position: relative;
+  text-align: center;
+  left:0;
+  z-index: 0;
+}
+=======
 
+>>>>>>> OC-Radio/master
 
 /* FORMS */
 /* label color */
@@ -188,6 +254,12 @@ label{
   display: inline;
   word-wrap: break-word;
 }
+<<<<<<< HEAD
+/* Expect the hover class to be on the body
+ before doing any hover effects */
+.hover .block:hover {
+ …
+=======
 .playerControls{
   position: absolute;
   bottom: 0;
@@ -199,13 +271,17 @@ label{
   justify-content: center;
   align-items: center;
   vertical-align: middle;
+>>>>>>> OC-Radio/master
 }
 
 
 
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> OC-Radio/master
 @media only screen and (max-width: 1200px) {
     header {
       font-size: 1.5rem !important;
@@ -217,6 +293,9 @@ label{
     }
 }
 @media only screen and (max-width: 600px) {
+    body, html{
+      background-color: rgb(255,255,255);
+    }
     header {
       font-size: .9rem !important;
       font-weight: 400 !important;
@@ -230,6 +309,8 @@ label{
     .widearea-icon.fullscreen {
       display: none;
     }
+<<<<<<< HEAD
+=======
 }
 
 
@@ -251,4 +332,5 @@ label{
 }
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: rgba(100,100,100,0.4);
+>>>>>>> OC-Radio/master
 }
