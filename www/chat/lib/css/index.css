@@ -12,7 +12,7 @@ h1{
   font-size: 1.7rem !important;
 }
 header{
-  width: 25%;
+  width: 40%;
   height: 100%;
   position: fixed;
   top: 0;
@@ -26,10 +26,18 @@ header{
 }
 
 main{
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
   word-break: break-word;
   overflow: hidden;
+=======
+  max-height: 1080px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  word-break: break-word;
+>>>>>>> OC-Radio/master
 }
 .chat-container{
   margin: 0 !important;
@@ -43,18 +51,34 @@ main{
   margin: 0 !important;
   padding: 0 !important;
   bottom: 0 !important;
+<<<<<<< HEAD
   width: 75%;
+=======
+  width: 60%;
+  min-height: 100px;
+>>>>>>> OC-Radio/master
   z-index: 99;
   border-top: 1px solid rgb(240, 240, 240);;
   background: rgb(255, 255, 255);
   display: block;
+<<<<<<< HEAD
+=======
+
+>>>>>>> OC-Radio/master
 }
 .input-container textarea{
   width: 100% !important;
   height: 100% !important;
+<<<<<<< HEAD
   color: #000;
   resize: false !important;
   background: rgb(240, 240, 240);
+=======
+  color: #1e1e1e;
+  resize: false;
+  background: rgb(255, 255, 255);
+  float: none !important;
+>>>>>>> OC-Radio/master
 
   border: none;
   overflow: auto;
@@ -68,7 +92,10 @@ main{
   border-bottom: 0px solid rgba(0,0,0,0) !important;
   box-shadow: 0 0 0 0 rgba(0,0,0,0) !important;
   border: 0px solid white;
+<<<<<<< HEAD
   background-color: #fff;
+=======
+>>>>>>> OC-Radio/master
 }
 #messageInput-overlay{
   position: absolute;
@@ -76,8 +103,13 @@ main{
   right: 0;
 }
 .messages-container{
+<<<<<<< HEAD
   height: 85vh;
   width: 75%;
+=======
+  height: 85%;
+  width: 60%;
+>>>>>>> OC-Radio/master
   overflow: hidden;
   background: rgb(240,240,240);
   margin: 0;
@@ -126,6 +158,7 @@ main{
   justify-content: center;
   align-items: center;
 }
+<<<<<<< HEAD
 #smallPlayer ul{
   height: inherit;
   width: inherit;
@@ -162,6 +195,9 @@ main{
   left:0;
   z-index: 0;
 }
+=======
+
+>>>>>>> OC-Radio/master
 
 /* FORMS */
 /* label color */
@@ -218,16 +254,34 @@ label{
   display: inline;
   word-wrap: break-word;
 }
+<<<<<<< HEAD
 /* Expect the hover class to be on the body
  before doing any hover effects */
 .hover .block:hover {
  …
+=======
+.playerControls{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+>>>>>>> OC-Radio/master
 }
 
 
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> OC-Radio/master
 @media only screen and (max-width: 1200px) {
     header {
       font-size: 1.5rem !important;
@@ -255,4 +309,28 @@ label{
     .widearea-icon.fullscreen {
       display: none;
     }
+<<<<<<< HEAD
+=======
+}
+
+
+/* SCROLLBAR PROPERTIES */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.01);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(100, 100, 100,0.8);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(100,100,100,0.4);
+>>>>>>> OC-Radio/master
 }

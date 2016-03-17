@@ -11,6 +11,7 @@
   <body>
 
     <!-- NAVBAR FOR SMALL/MOBILE DEVICES WILL ALSO BE TOGGABLE -->
+<<<<<<< HEAD
     <div class="hide-on-med-and-up" id="smallPlayer">
       <a href='#' class="btn-flat grey-text text-darken-4 waves-effect waves-light right" onclick='logout();' id="logoutBTN">&nbsp; logout &nbsp;</a>
       <ul>
@@ -62,6 +63,30 @@
           <!-- PLAYER WILL END HERE -->
         </li>
       </ul>
+=======
+    <div class="navbar-fixed hide-on-med-and-up" id="navbar">
+      <nav class="green lighten-1">
+        <div class="nav-wrapper">
+          <ul class="row">
+            <li class="col s8 left">
+              <a href='#' class="white-text waves-effect waves-light left"><i class="material-icons">pause</i></a>
+              <div class="ticker">
+                <ul>
+                  <li><em>Can't Feel My Face</em></li>
+                  <li><b>The Weekend</b></li>
+                  <li>(feat) NoOne</li>
+                  ...
+                </ul>
+              </div>
+            </li>
+            <li class="col s4 right">
+              <small class="center-align grey-text text-darken-2" id="profile"> OC Radio | Player </small>
+              <a href='#' class="white-text waves-effect waves-light right" onclick='logout();' id="logoutBTN">&nbsp; logout &nbsp;</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+>>>>>>> OC-Radio/master
     </div>
     <!-- END OF DYNAMIC NAV -->
 
@@ -82,6 +107,7 @@
         <div class="col s12">
           <div class="white-text">
             <div class="divider"></div>
+<<<<<<< HEAD
             <div class="myWrapper">
               <ul>
                 <li>Now playing <em><span id="track-title">title</span></em></li>
@@ -143,6 +169,93 @@
                 </li>
               </ul>
             </div>
+=======
+
+            <!-- Player -->
+            <div class="col s12"  id="playerHolder">
+              <div class="card large grey darken-4 white-text text-darken-4 left-align">
+                <div class="card-image">
+                  <img class="responsive-img" src="http://unsplash.it/200/300">
+                  <span class="card-title">OC Radio </span>
+                </div>
+                <div class="card-content">
+                    <div class="row center">
+                      <div class="col s12 truncate">
+                        <span id="track-title">N/A</span>
+                      </div>
+                      <p id="description">DESCRIPTION</p>
+                    </div>
+                </div>
+                <div class="card-action">
+                  <div class="grey darken-4 playerControls">
+                    <!-- PLAYER -->
+                    <div id="player" class="jp-jplayer"></div>
+                    <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+                        <div class="jp-interface center white-text">
+                          <div class="row">
+                            <div class="col s3">
+                              <a class="jp-play btn-flat white-text left" id="player-play" role="button" tabindex="0">
+                                <i class="material-icons large">play_arrow</i>
+                              </a>
+                              <a class="jp-pause btn-flat white-text left" id="player-pause" role="button" tabindex="0">
+                                <i class="material-icons large">pause</i>
+                              </a>
+                            </div>
+
+                            <div class="col s3">
+                              <a class="jp-mute btn-flat white-text right" id="player-mute" role="button" tabindex="0">
+                                <i class="material-icons large">volume_up</i>
+                              </a>
+                              <a class="jp-unmute btn-flat white-text right" id="player-unmute" role="button" tabindex="0">
+                                <i class="material-icons large">volume_off</i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="jp-no-solution">
+                          <span>Update Required</span>
+                          To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
+                      </div><!-- .jp-audio -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End of Player -->
+
+            <!-- <div class="ticker row">
+              <ul>
+                <li>Now playing <em>Can't Feel My Face</em></li>
+                <li>Performed by <b>The Weekend</b></li>
+              </ul>
+            </div>
+            <div class="col s12">
+              <a href='#' class="white-text waves-effect waves-light "><i class="material-icons">play_arrow</i></a>
+              <a href='#' class="white-text waves-effect waves-light "><i class="material-icons">volume_mute</i></a>
+            </div> -->
+
+            <div class="divider"></div>
+            <!-- OPTIONS MENU -->
+            <div class="row contianer">
+              <ul class="flow-text left-align">
+                <li>Options</li>
+                <li class="center">
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="filled-in red-text" id="enterSender" />
+                    <label for="enterSender">enter to send</label>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="filled-in red-text" id="tickerStopper" />
+                    <label for="tickerStopper">stop ticker animation</label>
+                  </label>
+                </li>
+              </ul>
+            </div>
+>>>>>>> OC-Radio/master
             <!-- END OF OPTIONS MENU -->
           </div>
         </div>
@@ -186,8 +299,14 @@
 
       <!-- CHAT INPUT CONTAINER -->
       <div class='input-container'>
+<<<<<<< HEAD
         <textarea id="messageInput" tabindex="1" class="col s12" placeholder="write a message..." ></textarea>
         <div class="btn-flat" id="messageInput-overlay">
+=======
+          <textarea id="messageInput" tabindex="1" class="col s12" placeholder="write a message..." ></textarea>
+        <div class="valign-wrapper" id="messageInput-overlay">
+
+>>>>>>> OC-Radio/master
           <a class="btn-flat grey-text waves-effect waves-dark" onclick="postNewMessage();">
             send
             <i class="material-icons">send</i>
@@ -208,6 +327,13 @@
     <script src="lib/js/ticker/jquery.easy-ticker.min.js"></script>
 
     <script src="lib/js/materialize.js"></script>
+<<<<<<< HEAD
     <script src="lib/js/main.js"></script>
+=======
+    <script src="lib/js/ticker/jquery.ticker.min.js"></script>
+    <script src="lib/js/jplayer.js"></script>
+    <script src="lib/js/myPlayer.js"></script>
+    <script src="lib/js/index.js"></script>
+>>>>>>> OC-Radio/master
   </body>
 </html>

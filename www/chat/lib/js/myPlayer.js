@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 $(function(){
 
   startPlayer();
 });
+=======
+(function(){
+
+  startPlayer();
+})();
+>>>>>>> OC-Radio/master
 
 function startPlayer(){
   var serverName, trackTitle, description;
@@ -9,7 +16,11 @@ function startPlayer(){
 
   var stream = {
 		title: 'OCR-LIVE',
+<<<<<<< HEAD
 		mp3: "http://104.197.150.17:3000/playlist"
+=======
+		mp3: "http://127.0.0.1:8000/live"
+>>>>>>> OC-Radio/master
 	},
 	ready = false;
 	$("#player").jPlayer({
@@ -43,6 +54,7 @@ function startPlayer(){
 	});
 
   //update meta every 15 seconds
+<<<<<<< HEAD
   radioTitle();
   setInterval(function () {radioTitle();}, 25000);
 }
@@ -62,5 +74,33 @@ function radioTitle(){
       $('.myWrapper #track-artist').text(artist);
       $('.myWrapperSmall #track-title').text(name);
       $('.myWrapperSmall #track-artist').text(artist);
+=======
+  setInterval(function () {radioTitle();}, 5000);
+}
+
+function radioTitle(){
+    var url = 'http://127.0.0.1:8000/json.xsl';
+    var mountpoint = '/live';
+
+    $.ajax({
+          type: 'GET',
+          url: url,
+          async: true,
+          jsonpCallback: 'parseMusic',
+          contentType: "application/json",
+          dataType: 'jsonp',
+          success: function (json) {
+            trackTitle = json[mountpoint].title;
+            serverName = json[mountpoint].server_name;
+            description = json[mountpoint].description;
+
+            $('#server-title').text(serverName);
+            $('#track-title').text(trackTitle);
+            $('#listeners').text(json[mountpoint].listener);
+            $('#description').text(description);
+        },
+          error: function (e) { console.log(e.message);
+        }
+>>>>>>> OC-Radio/master
     });
 }
