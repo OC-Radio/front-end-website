@@ -1,7 +1,7 @@
-(function(){
+$(function(){
 
   startPlayer();
-})();
+});
 
 function startPlayer(){
   var serverName, trackTitle, description;
@@ -55,7 +55,7 @@ function radioTitle(){
     $.getJSON(url, {
       mountpoint: '/playlist'
     }).done(function (data) {
-      var title = data['icestats']['source'][0]['title'];
+      var title = data['icestats']['source']['title'];
       var name = title.split('|')[0];
       var artist = title.split('|')[1];
       $('.myWrapper #track-title').text(name);

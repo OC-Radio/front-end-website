@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="lib/css/materialize.css">
+    <link rel="stylesheet" href="lib/css/index.css">
+    <title> OC Radio | Player </title>
+  </head>
+  <body>
+
+    <!-- NAVBAR FOR SMALL/MOBILE DEVICES WILL ALSO BE TOGGABLE -->
+    <div class="hide-on-med-and-up" id="smallPlayer">
+      <a href='#' class="btn-flat grey-text text-darken-4 waves-effect waves-light right" onclick='logout();' id="logoutBTN">&nbsp; logout &nbsp;</a>
+      <ul>
+
+        <li class="center">
+          <center>
+            <span class="center-align grey-text text-darken-4" id="profile"> OC Radio | Player </span>
+            <img class="responsive-img album_art" src="http://unsplash.it/1024/1024?random" alt="ALBUM_ART"/>
+            <div class="myWrapperSmall grey-text text-darken-4">
+              <ul>
+                <li>Now playing <em><span id="track-title">title</span></em></li>
+                <li>Performed by <b><span id="track-artist">artist</span></b></li>
+              </ul>
+            </div>
+          </center>
+        </li>
+        <li>
+          <!-- PLAYER WILL GO HERE -->
+            <div id="smallControls">
+              <div class="divider"></div>
+              <div class="col s12">
+                <div id="player" class="jp-jplayer"></div>
+                <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+                    <div class="jp-interface center grey-text text-darken-4">
+                      <div class="row">
+                        <div class="col s12">
+                          <a class="jp-play btn-flat grey-text text-darken-4 left" id="player-play" role="button" tabindex="0">
+                            <i class="material-icons large">play_arrow</i>
+                          </a>
+                          <a class="jp-pause btn-flat grey-text text-darken-4 left" id="player-pause" role="button" tabindex="0">
+                            <i class="material-icons large">pause</i>
+                          </a>
+                          <a class="jp-mute btn-flat grey-text text-darken-4 right" id="player-mute" role="button" tabindex="0">
+                            <i class="material-icons large">volume_up</i>
+                          </a>
+                          <a class="jp-unmute btn-flat grey-text text-darken-4 right" id="player-unmute" role="button" tabindex="0">
+                            <i class="material-icons large">volume_off</i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="jp-no-solution">
+                      <span>Update Required</span>
+                      To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                    </div>
+                  </div><!-- .jp-audio -->
+              </div>
+            </div>
+          <!-- PLAYER WILL END HERE -->
+        </li>
+      </ul>
+    </div>
+    <!-- END OF DYNAMIC NAV -->
+
+    <!-- HEADER -->
+    <header class="row hide-on-small-only">
+
+      <!-- LOGOUT BUTTON -->
+      <div class="row">
+        <small class="center-align white-text text-darken-2" id="profile2"></small>
+        <a href='#' class="btn-floating btn-flat tooltipped white  waves-effect waves-light right" onclick='logout();' id="logoutBTN" data-position="bottom" data-delay="50" data-tooltip="logout">
+          <i class="material-icons red-text">settings_power</i>
+        </a>
+      </div>
+      <!-- END OF LOGOUT BUTTON -->
+
+      <!-- PLAYER WILL GO HERE -->
+      <div class="row">
+        <div class="col s12">
+          <div class="white-text">
+            <div class="divider"></div>
+            <div class="myWrapper">
+              <ul>
+                <li>Now playing <em><span id="track-title">title</span></em></li>
+                <li>Performed by <b><span id="track-artist">artist</span></b></li>
+                <li>Now playing <em><span id="track-title">title</span></em></li>
+                <li>Performed by <b><span id="track-artist">artist</span></b></li>
+                <li>Now playing <em><span id="track-title">title</span></em></li>
+                <li>Performed by <b><span id="track-artist">artist</span></b></li>
+              </ul>
+            </div>
+            <div class="col s12">
+              <div id="player" class="jp-jplayer"></div>
+              <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+                  <div class="jp-interface center white-text">
+                    <div class="row">
+                      <div class="col s6">
+                        <a class="jp-play btn-flat white-text left" id="player-play" role="button" tabindex="0">
+                          <i class="material-icons large">play_arrow</i>
+                        </a>
+                        <a class="jp-pause btn-flat white-text left" id="player-pause" role="button" tabindex="0">
+                          <i class="material-icons large">pause</i>
+                        </a>
+                      </div>
+                      <div class="col s6">
+                        <a class="jp-mute btn-flat white-text right" id="player-mute" role="button" tabindex="0">
+                          <i class="material-icons large">volume_up</i>
+                        </a>
+                        <a class="jp-unmute btn-flat white-text right" id="player-unmute" role="button" tabindex="0">
+                          <i class="material-icons large">volume_off</i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jp-no-solution">
+                    <span>Update Required</span>
+                    To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                  </div>
+                </div><!-- .jp-audio -->
+            </div>
+
+            <div class="divider"></div>
+            <!-- OPTIONS MENU -->
+            <div class="row contianer">
+              <ul class="flow-text left-align">
+                <li>Options</li>
+                <li class="center">
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="filled-in red-text" id="enterSender" />
+                    <label for="enterSender">enter to send</label>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" class="filled-in red-text" id="tickerStopper" />
+                    <label for="tickerStopper">stop ticker animation</label>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <!-- END OF OPTIONS MENU -->
+          </div>
+        </div>
+      </div>
+      <!-- PLAYER WILL END HERE -->
+
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- LOGIN FORM -->
+    <div class="row container" id="login-wrapper">
+      <div class="col s12 m8 l6 push-m2 push-l3 left-align">
+        <h1 class="center-align grey-text text-darken-2" id="login-message"> OC Radio | Player </h1>
+        <form id="auth-form">
+            <label for="email" data-error="somethings missing..." data-success="looks great!">Email</label>
+            <input type="email" id="email" class="input-field" placeholder="someone@example.com" autocomplete="on" required/>
+          <br/>
+          <label for="password">
+            Password
+            <input type="password" id="password" placeholder="" class="input-field" required/>
+          </label>
+          <a href='#' class="btn-flat blue-text center-align waves-effect waves-light col s6" onclick='register();'>Register</a>
+          <a href='#' class="btn-flat blue-text center-align waves-effect waves-light col s6" onclick='login();'>Login</a>
+          <a href='#' class="btn-flat grey-text center-align waves-effect waves-light col s12" onclick='resetPass();'>Reset Password</a>
+        </form>
+      </div>
+    </div>
+    <!-- END OF LOGIN FORM -->
+
+    <!-- CHAT CONTAINER -->
+    <main class="row hide-on-small-only">
+      <div class="chat-container col s12">
+        <!-- MESSAGES CONTAINER -->
+        <div class="messages-container">
+          <div class="row">
+            <ul id='messages'></ul>
+          </div>
+        </div>
+        <!-- END OF MESSAGES CONTAINER -->
+      </div>
+
+      <!-- CHAT INPUT CONTAINER -->
+      <div class='input-container'>
+        <textarea id="messageInput" tabindex="1" class="col s12" placeholder="write a message..." ></textarea>
+        <div class="btn-flat" id="messageInput-overlay">
+          <a class="btn-flat grey-text waves-effect waves-dark" onclick="postNewMessage();">
+            send
+            <i class="material-icons">send</i>
+          </a>
+        </div>
+      </div>
+      <!-- END OF CHAT INPUT CONTAINER -->
+    </main>
+    <!-- END OF CHAT CONTAINER -->
+
+    <script src='lib/js/jquery.js'></script>
+    <script src='lib/js/firebase.js'></script>
+
+
+    <script src="lib/js/jplayer.js"></script>
+    <script src="lib/js/myPlayer.js"></script>
+
+    <script src="lib/js/ticker/jquery.easy-ticker.min.js"></script>
+
+    <script src="lib/js/materialize.js"></script>
+    <script src="lib/js/main.js"></script>
+  </body>
+</html>
