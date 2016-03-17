@@ -9,7 +9,7 @@ function startPlayer(){
 
   var stream = {
 		title: 'OCR-LIVE',
-		mp3: "http://127.0.0.1:8000/live"
+		mp3: "http://104.197.150.17:3000/playlist"
 	},
 	ready = false;
 	$("#player").jPlayer({
@@ -43,31 +43,24 @@ function startPlayer(){
 	});
 
   //update meta every 15 seconds
-  setInterval(function () {radioTitle();}, 5000);
+  radioTitle();
+  setInterval(function () {radioTitle();}, 25000);
 }
 
 function radioTitle(){
-    var url = 'http://127.0.0.1:8000/json.xsl';
-    var mountpoint = '/live';
+    var url = 'http://104.197.150.17:3001/status-json.xsl';
 
-    $.ajax({
-          type: 'GET',
-          url: url,
-          async: true,
-          jsonpCallback: 'parseMusic',
-          contentType: "application/json",
-          dataType: 'jsonp',
-          success: function (json) {
-            trackTitle = json[mountpoint].title;
-            serverName = json[mountpoint].server_name;
-            description = json[mountpoint].description;
+    var mountpoint = '/playlist';
 
-            $('#server-title').text(serverName);
-            $('#track-title').text(trackTitle);
-            $('#listeners').text(json[mountpoint].listener);
-            $('#description').text(description);
-        },
-          error: function (e) { console.log(e.message);
-        }
+    $.getJSON(url, {
+      mountpoint: '/playlist'
+    }).done(function (data) {
+      var title = data['icestats']['source'][0]['title'];
+      var name = title.split('|')[0];
+      var artist = title.split('|')[1];
+      $('.myWrapper #track-title').text(name);
+      $('.myWrapper #track-artist').text(artist);
+      $('.myWrapperSmall #track-title').text(name);
+      $('.myWrapperSmall #track-artist').text(artist);
     });
 }

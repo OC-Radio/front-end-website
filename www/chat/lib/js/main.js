@@ -6,8 +6,19 @@ $(function(){
   $profile = $('#profile');
   $profile2 = $('#profile2');
 
+  $('.myWrapper, .myWrapperSmall').easyTicker({
+    direction: 'up',
+    easing: 'swing',
+    speed: 'slow',
+    interval: 5000,
+    height: 'auto',
+    visible: 1,
+    mousePause: 0,
+  });
+
   $('#logoutBTN').hide();
   $('#firechat-wrapper').hide();
+  $('#smallPlayer').hide();
 
   chatRef = new Firebase('https://oc-radio.firebaseio.com');
   messageListRef = new Firebase('https://oc-radio.firebaseio.com/messages');
@@ -23,7 +34,6 @@ $(function(){
       authDataCallback(authData, false);
     }
   });
-  $('.ticker').ticker();
   changeCheckStatus();
 });
 
@@ -173,9 +183,6 @@ function resetPass(){
   alert("Cannot rest");
 }
 
-function saveData(authData){
-}
-
 function showForm(){
   $('#login-wrapper').show(500);
   $('#loginBTN-container').hide();
@@ -214,6 +221,7 @@ function authDataCallback(authData, loggedin) {
     $('#loginBTN').hide();
     $('.input-container').show(500);
     $('header').show(500);
+    $("#smallPlayer").show(500);
 
     messageContainer.empty();
 
@@ -224,11 +232,12 @@ function authDataCallback(authData, loggedin) {
     $profile2.append(getName(authData));
     getMessages(authData);
   }else{
-    $('.messages-container').hide(500);
-    $('.input-container').hide(500);
+    $('.messages-container').hide();
+    $('.input-container').hide();
     $('#login-wrapper').show(500);
     $('#logoutBTN').hide();
     $('header').hide();
+    $("#smallPlayer").hide();
     messageContainer.empty();
     $loginMSG.empty();
     $loginMSG.append("OC Radio | Player");
